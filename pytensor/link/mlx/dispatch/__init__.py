@@ -10,4 +10,5 @@ import pytensor.link.mlx.dispatch.core
 import pytensor.link.mlx.dispatch.signal
 import pytensor.link.mlx.dispatch.signal.conv
 import pytensor.link.mlx.dispatch.blockwise
+import pytensor.link.mlx.dispatch.slinalg
 # isort: on
