@@ -67,7 +67,7 @@ documentation = "https://pytensor.readthedocs.io/en/latest/"
 pytensor-cache = "pytensor.bin.pytensor_cache:main"
 
 [project.optional-dependencies]
-complete = ["pytensor[jax]", "pytensor[numba]"]
+complete = ["pytensor[jax]", "pytensor[numba]", "pytensor[mlx]"]
 development = ["pytensor[complete]", "pytensor[tests]", "pytensor[rtd]"]
 tests = [
     "pytest",
@@ -81,6 +81,8 @@ tests = [
 rtd = ["sphinx>=5.1.0,<6", "pygments", "pydot", "pydot2", "pydot-ng"]
 jax = ["jax", "jaxlib"]
 numba = ["numba>=0.57", "llvmlite"]
+mlx = ['mlx']
+
 
 [tool.setuptools.packages.find]
 include = ["pytensor*"]
