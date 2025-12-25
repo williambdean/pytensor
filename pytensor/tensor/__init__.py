@@ -1,18 +1,18 @@
 """Symbolic tensor types and constructor functions."""
 
-from collections.abc import Callable, Sequence
+from collections.abc import Sequence
 from functools import singledispatch
-from typing import TYPE_CHECKING, Any, NoReturn, Optional, Union
+from typing import TYPE_CHECKING
 
 from pytensor.graph.basic import Constant, Variable
 from pytensor.graph.op import Op
 
 
 if TYPE_CHECKING:
-    from numpy.typing import ArrayLike, NDArray
+    from numpy.typing import ArrayLike
 
 
-TensorLike = Union[Variable, Sequence[Variable], "ArrayLike"]
+TensorLike = Variable | Sequence[Variable] | "ArrayLike"
 
 
 def as_tensor_variable(
